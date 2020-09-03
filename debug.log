@@ -1,0 +1,68 @@
+[0730/203544.805:ERROR:file_io_win.cc(161)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-5vAKn6\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0730/203544.807:ERROR:file_io_win.cc(170)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-5vAKn6\Crashpad\reports\12614020-765f-43c7-9db5-853a2e6ea236.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0730/203544.808:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0730/204005.206:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0730/204005.206:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 12272
+[0730/204005.207:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0730/204329.717:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0730/204329.717:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 10668
+[0730/204329.717:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0730/213113.385:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0730/213113.386:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 15760
+[0730/213113.386:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0730/214235.883:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0730/214235.883:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 10584
+[0730/214235.883:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0730/225843.828:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0730/225843.829:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 17888
+[0730/225843.829:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/051213.433:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/051213.434:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 7252
+[0731/051213.434:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/053512.163:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/053512.164:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 13712
+[0731/053512.164:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/073132.342:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/073132.343:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 9388
+[0731/073132.343:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/102124.417:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/102124.419:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 14180
+[0731/102124.419:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/105128.500:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/105128.501:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 9968
+[0731/105128.501:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/115541.307:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/115541.308:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 17464
+[0731/115541.308:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/123951.066:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/123951.067:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 12148
+[0731/123951.067:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/124118.590:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/124118.591:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 6168
+[0731/124118.591:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/134136.831:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/134136.831:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 2036
+[0731/134136.831:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0731/144409.891:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name osarch, discarding value x86_64
+[0731/144409.892:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name pid, discarding value 17956
+[0731/144409.892:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name ptype, discarding value utility
+[0831/023534.062:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0902/120124.433:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-GMZ9xg\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/120124.437:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-GMZ9xg\Crashpad\reports\b1fb0139-4f24-4953-ae81-1451cbad3269.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/120124.437:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0902/135302.872:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0902/135302.890:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-N3AcXI\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/135302.890:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-N3AcXI\Crashpad\reports\09b64bfb-acc6-404f-b287-6784303e361a.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/135302.890:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0902/140543.572:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0902/140543.579:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-CsUDQH\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/140543.580:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-CsUDQH\Crashpad\reports\2938f109-8dbe-45d8-b0a1-fb9fd0213ea8.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/140543.580:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0902/191551.122:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0902/191551.144:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-qVdTfI\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/191551.144:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-qVdTfI\Crashpad\reports\b2f7bcc9-f75d-48d8-89ae-d12203c3cbf7.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/191551.144:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0902/191829.609:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0902/191829.616:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-B7vNnb\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/191829.616:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-B7vNnb\Crashpad\reports\7e1809ac-af32-4d9d-8590-c7b16e7d6a2b.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0902/191829.616:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
