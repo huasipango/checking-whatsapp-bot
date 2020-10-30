@@ -66,3 +66,201 @@
 [0902/191829.616:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-B7vNnb\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
 [0902/191829.616:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-B7vNnb\Crashpad\reports\7e1809ac-af32-4d9d-8590-c7b16e7d6a2b.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
 [0902/191829.616:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/193427.647:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0903/193427.656:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-c3d8TR\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/193427.657:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-c3d8TR\Crashpad\reports\0f33afce-3b9c-45a9-8d1c-bc4190d1da13.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/193427.657:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/193929.970:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0903/193929.976:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-uSV0dk\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/193929.976:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-uSV0dk\Crashpad\reports\e3b51f93-dd6f-4f2a-ae6e-b2ffa3989901.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/193929.977:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/194249.280:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0903/194249.286:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-WzUDNN\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/194249.286:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-WzUDNN\Crashpad\reports\76f1914e-34a8-48be-ab2c-2c6e3a1ee3f3.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/194249.286:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/194318.148:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0903/194318.155:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-CsRR88\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/194318.155:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-CsRR88\Crashpad\reports\0023e790-3f96-4c76-9891-6b4bf6c1633e.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/194318.155:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/194918.416:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-40LldP\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/194918.417:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-40LldP\Crashpad\reports\08e3b139-1c97-42ed-b9f0-6608615c7ba9.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/194918.417:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/195127.605:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0903/195127.612:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-dmDYwb\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/195127.612:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-dmDYwb\Crashpad\reports\9f282cb3-8716-4985-853f-3e5669def724.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/195127.612:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/211129.726:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0903/211129.749:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-NgrBv2\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211129.749:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-NgrBv2\Crashpad\reports\a2d6a7e8-1f45-44dc-bf90-bb640114b4d2.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211129.749:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/211510.576:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-78Xbk7\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211510.577:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-78Xbk7\Crashpad\reports\cc12c925-a1f7-4314-b4d9-bfe1cd51dc5f.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211510.577:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/211718.534:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0903/211718.541:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-3TyQWo\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211718.541:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-3TyQWo\Crashpad\reports\f8d98428-680f-47cf-9e50-587c0197759b.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211718.541:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/211822.209:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-J7ShwS\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211822.210:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-J7ShwS\Crashpad\reports\be53caed-a575-4e1d-b2c8-3f32244c9c71.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/211822.210:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/212109.367:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-McMgrq\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212109.368:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-McMgrq\Crashpad\reports\7a0dd49e-62de-4d5b-a558-6d1793003861.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212109.368:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/212513.846:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-J676AN\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212513.847:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-J676AN\Crashpad\reports\f01348e6-db81-4664-b123-aed018dc3e72.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212513.847:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/212602.162:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-cFPuhM\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212602.162:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-cFPuhM\Crashpad\reports\dee81147-b139-4af1-b7d2-0cc3e678399c.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212602.162:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/212718.132:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Lmu5oL\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212718.133:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Lmu5oL\Crashpad\reports\65f24b5d-8781-413a-9890-5018330c05eb.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212718.133:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/212921.893:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-AlhSPn\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212921.894:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-AlhSPn\Crashpad\reports\827a9a12-c2f4-4724-a5cf-2e7066f4ba32.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/212921.894:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/213159.669:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-qKByPN\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/213159.670:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-qKByPN\Crashpad\reports\10086be7-fa8d-43c4-9fbd-582f9293b784.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/213159.670:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/213252.936:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-GFiAmX\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/213252.937:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-GFiAmX\Crashpad\reports\f271e91b-c8c5-4ce5-947b-9d192c46d4bb.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/213252.937:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0903/213412.453:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-VDXaKj\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/213412.454:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-VDXaKj\Crashpad\reports\583cd0ec-6370-496a-baf1-e702d888a6e8.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0903/213412.454:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/043858.196:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-HIlH1t\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/043858.199:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-HIlH1t\Crashpad\reports\1ed3a502-fc79-48a6-8b1f-cddae6dfe56f.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/043858.199:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/044149.413:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-YYM2ZH\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/044149.414:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-YYM2ZH\Crashpad\reports\807edb8d-d7c4-42cc-9b0c-14cbc35d74e1.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/044149.414:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/045722.582:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-KTPUF7\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/045722.583:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-KTPUF7\Crashpad\reports\5936845a-fb07-4d82-98ee-27c2617f462f.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/045722.583:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/050645.446:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-X5de2O\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/050645.447:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-X5de2O\Crashpad\reports\a8a48a3a-b9c1-49cb-8ccc-5d7abb798b7e.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/050645.447:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/050845.114:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-nqbkKN\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/050845.114:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-nqbkKN\Crashpad\reports\18e5d8d6-6304-4637-96dc-e59ee244e61a.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/050845.115:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/051311.595:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-PBlROo\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/051311.596:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-PBlROo\Crashpad\reports\c757a9ce-e07b-4660-97e6-522c8c1d3e39.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/051311.596:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/052437.631:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0904/052437.638:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Fopc0J\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052437.638:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Fopc0J\Crashpad\reports\eb528434-f84d-4a4f-a9d1-a452691de1ba.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052437.638:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/052754.114:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-M349WJ\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052754.114:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-M349WJ\Crashpad\reports\dc805b58-d1b2-44d8-b309-f8c24973d910.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052754.115:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/052853.172:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-3REjn1\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052853.173:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-3REjn1\Crashpad\reports\55389333-9e60-4373-a646-048197ab9fb7.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052853.173:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/052958.185:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-kPHiaQ\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052958.186:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-kPHiaQ\Crashpad\reports\0be3f12f-7c2d-4fc2-ac4b-27d97dbe22e9.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/052958.186:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/083951.424:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-8ErV08\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/083951.425:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-8ErV08\Crashpad\reports\34069fa5-b075-4d14-9834-189d86c67644.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/083951.425:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/084427.034:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-9FGg1k\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/084427.035:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-9FGg1k\Crashpad\reports\4a9e1552-4ae9-4132-9c49-5d4b19fa5236.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/084427.035:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/084630.647:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-YW216Q\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/084630.648:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-YW216Q\Crashpad\reports\e83b44e3-8606-4231-a674-9144d34cd285.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/084630.648:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/084806.296:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-u1ljOa\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/084806.296:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-u1ljOa\Crashpad\reports\6711ee65-1564-45b3-b263-696f588c0d79.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/084806.296:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/085014.029:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-C1XGdN\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/085014.031:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-C1XGdN\Crashpad\reports\948f6234-ae9f-42c3-a8a8-74a4d1d55e25.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/085014.031:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/085148.322:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-liDahR\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/085148.323:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-liDahR\Crashpad\reports\f6a43b9b-0900-4553-94da-e11db335f569.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/085148.323:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/092445.291:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0904/092445.298:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-XJQtEc\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/092445.299:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-XJQtEc\Crashpad\reports\85044aed-7f43-4e57-9735-9439d4f40203.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/092445.299:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/094950.805:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0904/094950.813:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Xy9PxZ\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/094950.813:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Xy9PxZ\Crashpad\reports\bf3a1956-efcb-4cc1-a93a-3a2d5555dc46.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/094950.813:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/095849.364:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-28yqsL\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/095849.366:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-28yqsL\Crashpad\reports\f1fc1c48-56d0-4c80-8443-eeeeea5bc87b.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/095849.366:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/100104.342:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-86XNjC\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/100104.342:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-86XNjC\Crashpad\reports\0b9f9a04-0914-4d4f-93f0-b63bf530e263.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/100104.342:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/101515.478:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-hcnFtA\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/101515.479:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-hcnFtA\Crashpad\reports\bad843af-ebb2-43bb-8edc-14ad975d853b.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/101515.479:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/101916.957:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-DlqRUB\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/101916.958:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-DlqRUB\Crashpad\reports\31a132a2-ad3f-4292-8908-28d37da5ee47.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/101916.958:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/102605.359:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-INC9G2\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/102605.360:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-INC9G2\Crashpad\reports\9800c31e-09e2-48a3-ba75-4fe4fa74d191.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/102605.360:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/104439.805:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-bhGKvJ\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/104439.806:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-bhGKvJ\Crashpad\reports\4d01743b-3cde-4c78-a0aa-067fdce57251.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/104439.806:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/110005.028:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0904/110005.035:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-MHBCNS\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/110005.035:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-MHBCNS\Crashpad\reports\cdc095c6-e547-42fc-a76e-5abe95a3b284.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/110005.035:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/110050.973:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-8wYSRM\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/110050.974:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-8wYSRM\Crashpad\reports\c069f834-6f7f-4510-83d3-bf137f1fe118.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/110050.974:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/123834.089:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[0904/123834.111:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-A4RUN6\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/123834.111:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-A4RUN6\Crashpad\reports\6b70c21b-e650-417b-80e7-16acc10ae2a5.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/123834.112:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/124018.236:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-ilvvoQ\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/124018.237:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-ilvvoQ\Crashpad\reports\830affc3-9156-45c0-b0b2-1b0b878086c6.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/124018.237:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/124229.069:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-cF63yU\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/124229.070:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-cF63yU\Crashpad\reports\33572d8f-08e1-452f-b076-cda37ac83229.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/124229.070:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/125821.380:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-bwk9Px\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/125821.381:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-bwk9Px\Crashpad\reports\e30e932a-ecbf-49c8-926b-d2d5187fa476.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/125821.381:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/125933.158:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-abuJta\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/125933.159:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-abuJta\Crashpad\reports\69b9c4a3-3603-4c26-8f1a-5b821cf4afa6.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/125933.159:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/130153.785:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-e9qhe4\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/130153.785:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-e9qhe4\Crashpad\reports\a0ca49f5-17d6-416e-a64b-770e1a5ee099.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/130153.786:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/133600.723:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-FanJgb\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/133600.723:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-FanJgb\Crashpad\reports\cfa69433-edbf-45ce-b1fc-e49880a7958c.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/133600.723:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/134234.776:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-qOVnC9\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/134234.777:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-qOVnC9\Crashpad\reports\12fabd1b-d826-446a-b7d2-2a6800fbd425.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/134234.777:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/134415.915:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-YvvSfZ\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/134415.916:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-YvvSfZ\Crashpad\reports\0dadde1c-614e-4a9b-af82-f1c146dce629.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/134415.916:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/134728.630:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-priHQP\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/134728.631:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-priHQP\Crashpad\reports\73b145b0-ec2c-42c1-8aac-fc7bfcbcd88f.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/134728.631:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/135009.192:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-cs7H2E\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/135009.193:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-cs7H2E\Crashpad\reports\615a8647-411f-4fad-af4c-26eb0d839e85.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/135009.193:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/135625.545:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-tvCYgZ\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/135625.546:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-tvCYgZ\Crashpad\reports\9bbe5cfd-f840-43e3-9ceb-eab67f28984c.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/135625.546:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/140148.174:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-wr9TDi\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/140148.175:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-wr9TDi\Crashpad\reports\1627f23a-ccb4-42f6-9d0b-3936d9f7d7d1.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/140148.175:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/141557.903:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-OAWeM7\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/141557.905:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-OAWeM7\Crashpad\reports\7184c0d5-b649-4a27-9d56-7f6cee35e611.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/141557.905:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/141648.659:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-38aJmK\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/141648.660:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-38aJmK\Crashpad\reports\cda8bfa5-abbc-47fe-8a40-7523ef763c25.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/141648.660:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/142642.126:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-SIHkzF\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/142642.127:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-SIHkzF\Crashpad\reports\e88f4aa6-e53c-4f52-aceb-c824395c30a0.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/142642.127:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/142737.193:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-TawBjY\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/142737.194:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-TawBjY\Crashpad\reports\cd2d7050-56c9-4b33-9a97-b687c3742800.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/142737.194:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0904/160754.888:ERROR:file_io_win.cc(162)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Lbj3E1\Crashpad\settings.dat: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/160754.892:ERROR:file_io_win.cc(171)] CreateFile C:\Users\antho\AppData\Local\Temp\puppeteer_dev_chrome_profile-Lbj3E1\Crashpad\reports\cd3a042b-568a-4d63-878a-b60f78878854.dmp: El sistema no puede encontrar la ruta especificada. (0x3)
+[0904/160754.892:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
