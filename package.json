@@ -9,11 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/language": "^4.2.1",
     "nodemon": "^2.0.6",
     "request": "^2.88.2",
     "rss-parser": "^3.9.0",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
+    "sqlite3": "^5.0.0",
     "venom-bot": "^2.0.18",
     "wpapi": "^1.2.1"
   }

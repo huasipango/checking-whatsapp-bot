@@ -1,21 +1,26 @@
-import { Client } from "./client";
-import { Periodico } from "./periodico";
+import { Client } from "../classes/client";
+import { Periodico } from "../classes/periodico";
 
 const venom = require('venom-bot');
 const request = require('request');
 let Parser = require('rss-parser');
 const WPAPI = require( 'wpapi' );
+const path = require('path');
+const dbPath = path.resolve(__dirname, '../../../NodeTwitterStreamApi/database_twitter.db');
+const sqlite3 = require('sqlite3').verbose();
 
-var wp = new WPAPI({
-    endpoint: 'http://67.207.86.147/wp-json',
-    // This assumes you are using basic auth, as described further below
-    username: 'admin',
-    password: 'password'
-});
+// Imports the Google Cloud client library
+const language = require('@google-cloud/language');
+
+const client_lenguage = new language.LanguageServiceClient();
+
+// open the database
+//let db = new sqlite3.Database('../../../NodeTwitterStreamApi/database_twitter.db');
+
 
 const welcome_message : string = `Hola. Soy *Checkingbot* 🤖.\n\nPara ayudarte, elige una de las siguientes opciones: \n*1.* Buscar un chequeo 🔎\n*2.* Consejos para luchar contra la desinformación 💪\n*3.* Sobre nosotros ℹ`;
 
-const option_1 : string = `Escribe una palabra o una oración corta (en español) relacionada con el dato que quieres verificar, y te mandamos los 2 primeros resultados de nuestra base de datos.\n👀 Ejemplo: si viste rumores sobre *ajo*, escribe *ajo* o una oración corta como: *¿comer ajo cura el coronavirus?*\n----------\nEscribe 0 para volver al menú principal ↩️`;
+const option_1 : string = `Escribe una palabra o una oración corta (en español) relacionada con el dato que quieres verificar, y te mandamos los 2 primeros resultados de nuestra base de datos.\n👀 Ejemplo: si viste rumores sobre *coronavirus*, escribe *coronavirus* o una oración corta como: *coronavirus en Ecuador*\n----------\nEscribe 0 para volver al menú principal ↩️`;
 
 const answer_2 : string = `Consejos para luchar contra la desinformación 💡\n\nLa desinformación se lleva vidas. Revisa estos 6 consejos de chequeadores para evitar la desinformación durante la pandemia\n\nResiste el impulso de compartir. Respira.  🧘‍♂️\nRevisa cuál es la fuente de la información. ¿Hay una fuente? ¿Es confiable?  👀\nCréeles a los científicos antes que a los políticos 👩🏾‍⚕️\n¡Ten cuidado con tus emociones! Pueden nublar tu criterio 😤\nUsa herramientas como la búsqueda inversa de Google para verificar imágenes y videos 📷\nEdúcate con fuentes confiables. Tasas de infección, tasas de mortalidad... 🤓\n\n🌐 https://poy.nu/covidtips\n🌐 Cómo hacer una búsqueda inversa: https://bit.ly/2VK4KOu\n\n--\n📌Escribe un número para navegar\n0. Para volver al menú principal↩`
 
@@ -24,6 +29,27 @@ const answer_3 : string = `Esta iniciativa es impulsada por el Grupo de Investig
 const repeat_search : string = `\nEscribe para navergar\n\n0. Volver al menú principal ↩️`
 
 const bad_option : string = `🙈Este chatbot sólo responde a números y algunas palabras claves. Vamos a ir mejorando.\n\nIntenta de nuevo con un número o letra de las opciones que te dimos\n\nO escribe 0 para volver al menú principal`;
+
+async function quickstart(text: string) {
+    // Imports the Google Cloud client library
+    const language = require('@google-cloud/language');
+
+    // Instantiates a client
+    const client = new language.LanguageServiceClient();
+
+    const document = {
+        content: text,
+        type: 'PLAIN_TEXT',
+    };
+
+    try {
+        const [result] = await client.analyzeEntities({document});    
+        const entities = result.entities;     
+        return entities;
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 export class Bot {
     
@@ -46,9 +72,9 @@ export class Bot {
         venom.create()
             .then((client) => this.start(client))
             .catch((erro) => {
-            console.log(erro);
+                console.log(erro);
         });
-    }
+    } 
 
     public redirectTo(client, message, option: number){
         switch (option) {
@@ -129,8 +155,10 @@ export class Bot {
                                         }                                
                                     } else {
                                         if (option == 1) {
-                                            client.sendText(message.from, "Noticias nacionales 🇪🇨");
+                                            
+                                            client.sendText(message.from, "Noticias 🌐");
                                             this._coincidencias = this.getRssCoincidences(message.body);
+
                                             if (this._coincidencias.title.length > 0) {
                                                 this._coincidencias.title.forEach((element, i) => {
                                                     var respuesta = `*Fuente:* ${this._coincidencias.company[i]}\n\n*Título del artículo:* ${this._coincidencias.title[i]}. Fecha ${this._coincidencias.date[i]}.\n\n🌎 ${this._coincidencias.link[i]}`; 
@@ -139,6 +167,7 @@ export class Bot {
                                             }else{
                                                 client.sendText(message.from, "No hemos encontrado noticias locales sobre el tema. 🔎");
                                             }
+
                                             console.log("Realizando consulta en Google API:");
                                             request(
                                                 `https://factchecktools.googleapis.com/v1alpha1/claims:search?query=${message.body}&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419`, (err, res, body) => {
@@ -222,13 +251,18 @@ export class Bot {
             this._diario_el_telegrafo.link.push(item.link);
         });
         })();
-    }
+    }   
 
     public getRssCoincidences(key : string) : Periodico{
         let coincidencias : Periodico = new Periodico("Coincidencias en diarios");
-
+        // let busqueda_por_palabras = key.split(" ");
+        // busqueda_por_palabras.forEach((item,i)=>{
+        //     if(item.length < 5)
+        //         busqueda_por_palabras = busqueda_por_palabras.splice(i, 1);
+        // });
+        // console.log(busqueda_por_palabras);
         this._diario_el_comercio.title.forEach((item, i) =>{
-            if ((item.search(key) > -1) && (coincidencias.title.length < 2) ) {
+            if ((item.search(key) > -1) && (coincidencias.title.length < 4) ) {
                 coincidencias.title.push(this._diario_el_comercio.title[i]);
                 coincidencias.date.push(this._diario_el_comercio.date[i]);
                 coincidencias.link.push(this._diario_el_comercio.link[i]);
@@ -236,7 +270,7 @@ export class Bot {
             };
         });
         this._diario_el_universo.title.forEach((item, i) =>{
-            if ((item.search(key) > -1) && (coincidencias.title.length < 2)) {
+            if ((item.search(key) > -1) && (coincidencias.title.length < 4)) {
                 coincidencias.title.push(this._diario_el_universo.title[i]);
                 coincidencias.date.push(this._diario_el_universo.date[i]);
                 coincidencias.link.push(this._diario_el_universo.link[i]);
@@ -244,7 +278,7 @@ export class Bot {
             } 
         });
         this._diario_la_hora.title.forEach((item, i) =>{
-            if ((item.search(key) > -1) && (coincidencias.title.length < 2)) {
+            if ((item.search(key) > -1) && (coincidencias.title.length < 4)) {
                 coincidencias.title.push(this._diario_la_hora.title[i]);
                 coincidencias.date.push(this._diario_la_hora.date[i]);
                 coincidencias.link.push(this._diario_la_hora.link[i]);
@@ -252,7 +286,7 @@ export class Bot {
             } 
         });
         this._diario_el_telegrafo.title.forEach((item, i) =>{
-            if ((item.search(key) > -1) && (coincidencias.title.length < 2)) {
+            if ((item.search(key) > -1) && (coincidencias.title.length < 4)) {
                 coincidencias.title.push(this._diario_el_telegrafo.title[i]);
                 coincidencias.date.push(this._diario_el_telegrafo.date[i]);
                 coincidencias.link.push(this._diario_el_telegrafo.link[i]);
