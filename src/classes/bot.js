@@ -188,7 +188,7 @@ var Bot = /** @class */ (function () {
                                             _this._coincidencias = _this.getRssCoincidences(message.body);
                                             if (_this._coincidencias.title.length > 0) {
                                                 _this._coincidencias.title.forEach(function (element, i) {
-                                                    var respuesta = "*Fuente:* " + _this._coincidencias.company[i] + "\n\n*T\u00EDtulo del art\u00EDculo:* " + _this._coincidencias.title[i] + ". Fecha " + _this._coincidencias.date[i] + ".\n\n\uD83C\uDF0E " + _this._coincidencias.link[i];
+                                                    var respuesta = "*Fuente:* " + _this._coincidencias.company[i] + "\n\n*T\u00EDtulo del art\u00EDculo:* " + _this._coincidencias.title[i] + ". \n*Fecha:* " + _this._coincidencias.date[i] + ".\n\n\uD83C\uDF0E " + _this._coincidencias.link[i];
                                                     client.sendText(message.from, respuesta);
                                                 });
                                             }
@@ -213,7 +213,7 @@ var Bot = /** @class */ (function () {
                                                     client.sendText(message.from, repeat_search);
                                                 }
                                                 else {
-                                                    client.sendText(message.from, 'No han habido coincidencias para tu búsqueda.\nIntenta buscando algo más.🔎');
+                                                    client.sendText(message.from, 'No han habido verificaciones para tu búsqueda.\nIntenta buscando algo más.🔎');
                                                 }
                                             });
                                         }

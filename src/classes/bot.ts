@@ -161,7 +161,7 @@ export class Bot {
 
                                             if (this._coincidencias.title.length > 0) {
                                                 this._coincidencias.title.forEach((element, i) => {
-                                                    var respuesta = `*Fuente:* ${this._coincidencias.company[i]}\n\n*Título del artículo:* ${this._coincidencias.title[i]}. Fecha ${this._coincidencias.date[i]}.\n\n🌎 ${this._coincidencias.link[i]}`; 
+                                                    var respuesta = `*Fuente:* ${this._coincidencias.company[i]}\n\n*Título del artículo:* ${this._coincidencias.title[i]}. \n*Fecha:* ${this._coincidencias.date[i]}.\n\n🌎 ${this._coincidencias.link[i]}`; 
                                                     client.sendText(message.from, respuesta);
                                                 });           
                                             }else{
@@ -185,7 +185,7 @@ export class Bot {
                                                     }
                                                     client.sendText(message.from, repeat_search);    
                                                         }else{
-                                                            client.sendText(message.from, 'No han habido coincidencias para tu búsqueda.\nIntenta buscando algo más.🔎');
+                                                            client.sendText(message.from, 'No han habido verificaciones para tu búsqueda.\nIntenta buscando algo más.🔎');
                                                         }
                                             });
                                         } else if (option == 0) {
