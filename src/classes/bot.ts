@@ -156,8 +156,48 @@ export class Bot {
                                     } else {
                                         if (option == 1) {
                                             
-                                            client.sendText(message.from, "Noticias 🌐");
-                                            this._coincidencias = this.getRssCoincidences(message.body);
+                                            client.sendText(message.from, "Algunas noticias que tienen que ver 🌐");
+                                            
+                                            var personas = [];
+                                            let db = new sqlite3.Database(dbPath);
+                                            try {
+                                                let entidades = quickstart(message.body).then(function(result){                                                    
+                                                    /* let json2 = JSON.parse(result); */
+                                                    for (const news_element of result) {
+                                                        personas.push(news_element.name)
+                                                    }
+                                                    if (personas.length > 0) {
+                                                        console.log(personas);
+                                                        
+                                                        let sql = "SELECT content, user_name, date_time FROM tweets WHERE content LIKE '%";
+                                                        for (let index = 0; index < personas.length; index++) {                     
+                                                            console.log(personas[index]);
+                                                            sql = sql + `${personas[index]}%'`;
+                                                            if ((index + 1) != personas.length) {
+                                                                sql = sql +  " AND content LIKE '%";
+                                                            }else
+                                                                sql = sql + ";"
+                                                        }
+                                                        console.log(sql);
+                                                        try {
+                                                            db.each(sql, 
+                                                                (error, row) => {
+                                                                    var respuesta =  `📰 *Medio:* ${row.user_name}\n\n*Noticia:* ${row.content}\n*📅 Fecha:* ${row.date_time}`;
+                                                                    client.sendText(message.from, respuesta);
+                                                                });    
+                                                        } catch (error) {
+                                                            
+                                                        }
+                                                        
+                                                    }
+                                                });
+                                            } catch (error) {
+                                                console.log(error);
+                                                
+                                            }
+                                            
+                                            
+                                            /* this._coincidencias = this.getRssCoincidences(message.body);
 
                                             if (this._coincidencias.title.length > 0) {
                                                 this._coincidencias.title.forEach((element, i) => {
@@ -166,7 +206,7 @@ export class Bot {
                                                 });           
                                             }else{
                                                 client.sendText(message.from, "No hemos encontrado noticias locales sobre el tema. 🔎");
-                                            }
+                                            } */
 
                                             console.log("Realizando consulta en Google API:");
                                             request(
@@ -185,7 +225,7 @@ export class Bot {
                                                     }
                                                     client.sendText(message.from, repeat_search);    
                                                         }else{
-                                                            client.sendText(message.from, 'No han habido verificaciones para tu búsqueda.\nIntenta buscando algo más.🔎');
+                                                            client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
                                                         }
                                             });
                                         } else if (option == 0) {

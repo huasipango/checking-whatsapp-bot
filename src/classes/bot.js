@@ -136,7 +136,7 @@ var Bot = /** @class */ (function () {
                 else {
                     if (_this._users.length > 0) {
                         var existe = false;
-                        for (var index in _this._users) {
+                        var _loop_1 = function () {
                             if (_this._users[index].phone === message.from) {
                                 existe = true;
                                 var size = _this._users[index].choose.length;
@@ -184,17 +184,53 @@ var Bot = /** @class */ (function () {
                                     }
                                     else {
                                         if (option == 1) {
-                                            client.sendText(message.from, "Noticias 🌐");
-                                            _this._coincidencias = _this.getRssCoincidences(message.body);
-                                            if (_this._coincidencias.title.length > 0) {
-                                                _this._coincidencias.title.forEach(function (element, i) {
-                                                    var respuesta = "*Fuente:* " + _this._coincidencias.company[i] + "\n\n*T\u00EDtulo del art\u00EDculo:* " + _this._coincidencias.title[i] + ". \n*Fecha:* " + _this._coincidencias.date[i] + ".\n\n\uD83C\uDF0E " + _this._coincidencias.link[i];
-                                                    client.sendText(message.from, respuesta);
+                                            client.sendText(message.from, "Algunas noticias que tienen que ver 🌐");
+                                            personas = [];
+                                            var db_1 = new sqlite3.Database(dbPath);
+                                            try {
+                                                var entidades = quickstart(message.body).then(function (result) {
+                                                    /* let json2 = JSON.parse(result); */
+                                                    for (var _i = 0, result_1 = result; _i < result_1.length; _i++) {
+                                                        var news_element = result_1[_i];
+                                                        personas.push(news_element.name);
+                                                    }
+                                                    if (personas.length > 0) {
+                                                        console.log(personas);
+                                                        var sql = "SELECT content, user_name, date_time FROM tweets WHERE content LIKE '%";
+                                                        for (var index_1 = 0; index_1 < personas.length; index_1++) {
+                                                            console.log(personas[index_1]);
+                                                            sql = sql + (personas[index_1] + "%'");
+                                                            if ((index_1 + 1) != personas.length) {
+                                                                sql = sql + " AND content LIKE '%";
+                                                            }
+                                                            else
+                                                                sql = sql + ";";
+                                                        }
+                                                        console.log(sql);
+                                                        try {
+                                                            db_1.each(sql, function (error, row) {
+                                                                var respuesta = "\uD83D\uDCF0 *Medio:* " + row.user_name + "\n\n*Noticia:* " + row.content + "\n*\uD83D\uDCC5 Fecha:* " + row.date_time;
+                                                                client.sendText(message.from, respuesta);
+                                                            });
+                                                        }
+                                                        catch (error) {
+                                                        }
+                                                    }
                                                 });
                                             }
-                                            else {
-                                                client.sendText(message.from, "No hemos encontrado noticias locales sobre el tema. 🔎");
+                                            catch (error) {
+                                                console.log(error);
                                             }
+                                            /* this._coincidencias = this.getRssCoincidences(message.body);
+
+                                            if (this._coincidencias.title.length > 0) {
+                                                this._coincidencias.title.forEach((element, i) => {
+                                                    var respuesta = `*Fuente:* ${this._coincidencias.company[i]}\n\n*Título del artículo:* ${this._coincidencias.title[i]}. \n*Fecha:* ${this._coincidencias.date[i]}.\n\n🌎 ${this._coincidencias.link[i]}`;
+                                                    client.sendText(message.from, respuesta);
+                                                });
+                                            }else{
+                                                client.sendText(message.from, "No hemos encontrado noticias locales sobre el tema. 🔎");
+                                            } */
                                             console.log("Realizando consulta en Google API:");
                                             request("https://factchecktools.googleapis.com/v1alpha1/claims:search?query=" + message.body + "&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419", function (err, res, body) {
                                                 var json = JSON.parse(body);
@@ -206,14 +242,14 @@ var Bot = /** @class */ (function () {
                                                 }
                                                 if (length > 0) {
                                                     client.sendText(message.from, "Verificaciones ✅");
-                                                    for (var index_1 = 0; index_1 < 2; index_1++) {
-                                                        var respuesta = "*" + json.claims[index_1].claimReview[0].textualRating + ":* " + json.claims[index_1].text + "\n\nChequeado por *" + json.claims[index_1].claimReview[0].publisher.name + "*. el " + json.claims[index_1].claimDate + ".\n\n*Respuesta:* " + json.claims[index_1].claimReview[0].title + "\n\n\uD83C\uDF0E " + json.claims[index_1].claimReview[0].url;
+                                                    for (var index_2 = 0; index_2 < 2; index_2++) {
+                                                        var respuesta = "*" + json.claims[index_2].claimReview[0].textualRating + ":* " + json.claims[index_2].text + "\n\nChequeado por *" + json.claims[index_2].claimReview[0].publisher.name + "*. el " + json.claims[index_2].claimDate + ".\n\n*Respuesta:* " + json.claims[index_2].claimReview[0].title + "\n\n\uD83C\uDF0E " + json.claims[index_2].claimReview[0].url;
                                                         client.sendText(message.from, respuesta);
                                                     }
                                                     client.sendText(message.from, repeat_search);
                                                 }
                                                 else {
-                                                    client.sendText(message.from, 'No han habido verificaciones para tu búsqueda.\nIntenta buscando algo más.🔎');
+                                                    client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
                                                 }
                                             });
                                         }
@@ -223,6 +259,10 @@ var Bot = /** @class */ (function () {
                                     }
                                 }
                             }
+                        };
+                        var personas;
+                        for (var index in _this._users) {
+                            _loop_1();
                         }
                         if (existe == false) {
                             var newUser = new client_1.Client(message.from);
