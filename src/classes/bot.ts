@@ -64,6 +64,8 @@ export class Bot {
 
     private _coincidencias : Periodico;
 
+    private _excluded_phones : Array<string> = ['593992276655@c.us', '593995105450@c.us', '593999525975@c.us', '593992517501@c.us'];
+
     constructor(server_url : string) {
         this.server_url = server_url;
     }    
@@ -106,7 +108,7 @@ export class Bot {
                 2. Consulto cuál fue la última opción que escogió
             */
             /*1. Valido si el usuario ha intentado algo antes*/
-            if (message.isGroupMsg === false) {
+            if ((message.isGroupMsg === false) && (this._excluded_phones.indexOf(message.from) == -1)) {
                 if (message.isMMS || message.isMedia || message.isForwarded || message.isPSA) {
                     client.sendText(message.from, `No aceptamos ese tipo de mensajes.❌ \nResponde con texto simple únicamente.`);
                 } else {

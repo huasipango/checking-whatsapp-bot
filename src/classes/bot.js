@@ -93,6 +93,7 @@ var Bot = /** @class */ (function () {
         this._diario_el_universo = new periodico_1.Periodico("El Universo");
         this._diario_la_hora = new periodico_1.Periodico("La Hora");
         this._diario_el_telegrafo = new periodico_1.Periodico("El telégrafo");
+        this._excluded_phones = ['593992276655@c.us', '593995105450@c.us', '593999525975@c.us', '593992517501@c.us'];
         this.server_url = server_url;
     }
     Bot.prototype.init = function () {
@@ -129,7 +130,7 @@ var Bot = /** @class */ (function () {
                 2. Consulto cuál fue la última opción que escogió
             */
             /*1. Valido si el usuario ha intentado algo antes*/
-            if (message.isGroupMsg === false) {
+            if ((message.isGroupMsg === false) && (_this._excluded_phones.indexOf(message.from) == -1)) {
                 if (message.isMMS || message.isMedia || message.isForwarded || message.isPSA) {
                     client.sendText(message.from, "No aceptamos ese tipo de mensajes.\u274C \nResponde con texto simple \u00FAnicamente.");
                 }
