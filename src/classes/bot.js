@@ -94,11 +94,59 @@ var Bot = /** @class */ (function () {
         this._diario_la_hora = new periodico_1.Periodico("La Hora");
         this._diario_el_telegrafo = new periodico_1.Periodico("El telégrafo");
         this._excluded_phones = ['593992276655@c.us', '593995105450@c.us', '593999525975@c.us', '593992517501@c.us'];
+        this.chromiumArgs = [
+            '--disable-web-security', '--no-sandbox', '--disable-web-security',
+            '--aggressive-cache-discard', '--disable-cache', '--disable-application-cache',
+            '--disable-offline-load-stale-cache', '--disk-cache-size=0',
+            '--disable-background-networking', '--disable-default-apps', '--disable-extensions',
+            '--disable-sync', '--disable-translate', '--hide-scrollbars', '--metrics-recording-only',
+            '--mute-audio', '--no-first-run', '--safebrowsing-disable-auto-update',
+            '--ignore-certificate-errors', '--ignore-ssl-errors', '--ignore-certificate-errors-spki-list'
+        ];
         this.server_url = server_url;
     }
     Bot.prototype.init = function () {
         var _this = this;
-        venom.create('session', function (base64Qrimg, asciiQR, attempts) { }, function (statusSession, session) { }, { useChrome: false, browserArgs: ['--no-sandbox'] })
+        venom.create(
+        //session
+        'sessionName', //Pass the name of the client you want to start the bot
+        //catchQR
+        function (base64Qrimg, asciiQR, attempts, urlCode) {
+            console.log('Number of attempts to read the qrcode: ', attempts);
+            console.log('Terminal qrcode: ', asciiQR);
+            console.log('base64 image string qrcode: ', base64Qrimg);
+            console.log('urlCode (data-ref): ', urlCode);
+        }, 
+        // statusFind
+        function (statusSession, session) {
+            console.log('Status Session: ', statusSession); //return isLogged || notLogged || browserClose || qrReadSuccess || qrReadFail || autocloseCalled || desconnectedMobile || deleteToken
+            //Create session wss return "serverClose" case server for close
+            console.log('Session name: ', session);
+        }, 
+        // options
+        {
+            folderNameToken: 'tokens',
+            mkdirFolderToken: '',
+            headless: true,
+            devtools: false,
+            useChrome: false,
+            debug: false,
+            logQR: true,
+            browserWS: '',
+            browserArgs: ['--disable-web-security', '--no-sandbox', '--disable-web-security',
+                '--aggressive-cache-discard', '--disable-cache', '--disable-application-cache',
+                '--disable-offline-load-stale-cache', '--disk-cache-size=0',
+                '--disable-background-networking', '--disable-default-apps', '--disable-extensions',
+                '--disable-sync', '--disable-translate', '--hide-scrollbars', '--metrics-recording-only',
+                '--mute-audio', '--no-first-run', '--safebrowsing-disable-auto-update',
+                '--ignore-certificate-errors', '--ignore-ssl-errors', '--ignore-certificate-errors-spki-list'],
+            puppeteerOptions: {},
+            disableSpins: true,
+            disableWelcome: true,
+            updatesLog: true,
+            autoClose: 0,
+            createPathFileToken: false,
+        })
             .then(function (client) { return _this.start(client); })
             .catch(function (erro) {
             console.log(erro);
