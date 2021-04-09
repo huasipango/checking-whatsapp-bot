@@ -71,7 +71,8 @@ export class Bot {
     }    
 
     public init() : void{
-        venom.create()
+        venom.create( 'session', (base64Qrimg, asciiQR, attempts) => {}, 
+        (statusSession, session) => {}, { useChrome: false, browserArgs: ['--no-sandbox'] } )
             .then((client) => this.start(client))
             .catch((erro) => {
                 console.log(erro);

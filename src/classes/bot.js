@@ -98,7 +98,7 @@ var Bot = /** @class */ (function () {
     }
     Bot.prototype.init = function () {
         var _this = this;
-        venom.create()
+        venom.create('session', function (base64Qrimg, asciiQR, attempts) { }, function (statusSession, session) { }, { useChrome: false, browserArgs: ['--no-sandbox'] })
             .then(function (client) { return _this.start(client); })
             .catch(function (erro) {
             console.log(erro);
