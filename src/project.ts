@@ -8,5 +8,5 @@ class Sistema {
 }
 
 let bot = new Bot("https://localhost:44347/api/");
-bot.loadRss();
+//bot.loadRss();
 bot.init();
