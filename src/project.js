@@ -7,5 +7,5 @@ var Sistema = /** @class */ (function () {
     return Sistema;
 }());
 var bot = new bot_1.Bot("https://localhost:44347/api/");
-bot.loadRss();
+//bot.loadRss();
 bot.init();
