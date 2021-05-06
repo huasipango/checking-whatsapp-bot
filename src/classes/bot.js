@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Bot = void 0;
+// tsc -t es5 src/classes/Bot.ts
 var client_1 = require("../classes/client");
 var periodico_1 = require("../classes/periodico");
 var venom = require('venom-bot');
@@ -146,6 +147,7 @@ var Bot = /** @class */ (function () {
                                     _this.redirectTo(client, message, 0);
                                 }
                                 else {
+                                    //Tomo el segundo elemento después de la cabecera y se guarda en "option"
                                     var option = _this._users[index].choose[size - 1];
                                     if (message.body === "0") {
                                         _this.redirectTo(client, message, 0);
@@ -197,16 +199,15 @@ var Bot = /** @class */ (function () {
                                                     }
                                                     if (personas.length > 0) {
                                                         console.log(personas);
-                                                        var sql = "SELECT content, user_name, date_time FROM tweets WHERE content LIKE '%";
+                                                        var sql = "SELECT id, content, user_name, date_time FROM tweets WHERE content LIKE '%";
                                                         for (var index_1 = 0; index_1 < personas.length; index_1++) {
                                                             console.log(personas[index_1]);
                                                             sql = sql + (personas[index_1] + "%'");
                                                             if ((index_1 + 1) != personas.length) {
                                                                 sql = sql + " AND content LIKE '%";
                                                             }
-                                                            else
-                                                                sql = sql + ";";
                                                         }
+                                                        sql = sql + "ORDER BY id DESC LIMIT 3;";
                                                         console.log(sql);
                                                         try {
                                                             db_1.each(sql, function (error, row) {
@@ -215,12 +216,13 @@ var Bot = /** @class */ (function () {
                                                             });
                                                         }
                                                         catch (error) {
+                                                            console.error("Error al imprimir las noticias de Twitter: " + error);
                                                         }
                                                     }
                                                 });
                                             }
                                             catch (error) {
-                                                console.log(error);
+                                                console.error("Error con Google Natural API: " + error);
                                             }
                                             /* this._coincidencias = this.getRssCoincidences(message.body);
 
@@ -232,27 +234,30 @@ var Bot = /** @class */ (function () {
                                             }else{
                                                 client.sendText(message.from, "No hemos encontrado noticias locales sobre el tema. 🔎");
                                             } */
-                                            console.log("Realizando consulta en Google API:");
-                                            request("https://factchecktools.googleapis.com/v1alpha1/claims:search?query=" + message.body + "&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419", function (err, res, body) {
-                                                var json = JSON.parse(body);
-                                                try {
-                                                    var length = Object.keys(json.claims).length;
-                                                }
-                                                catch (error) {
-                                                    length = 0;
-                                                }
-                                                if (length > 0) {
-                                                    client.sendText(message.from, "Verificaciones ✅");
-                                                    for (var index_2 = 0; index_2 < 2; index_2++) {
-                                                        var respuesta = "*" + json.claims[index_2].claimReview[0].textualRating + ":* " + json.claims[index_2].text + "\n\nChequeado por *" + json.claims[index_2].claimReview[0].publisher.name + "*. el " + json.claims[index_2].claimDate + ".\n\n*Respuesta:* " + json.claims[index_2].claimReview[0].title + "\n\n\uD83C\uDF0E " + json.claims[index_2].claimReview[0].url;
-                                                        client.sendText(message.from, respuesta);
+                                            // Se demora 2 segundos en las Verificaciones de Google Fact Checking
+                                            setTimeout(function () {
+                                                console.log("Realizando consulta en Google Fact Checking API:");
+                                                request("https://factchecktools.googleapis.com/v1alpha1/claims:search?query=" + message.body + "&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419", function (err, res, body) {
+                                                    var json = JSON.parse(body);
+                                                    try {
+                                                        var length = Object.keys(json.claims).length;
                                                     }
-                                                    client.sendText(message.from, repeat_search);
-                                                }
-                                                else {
-                                                    client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
-                                                }
-                                            });
+                                                    catch (error) {
+                                                        length = 0;
+                                                    }
+                                                    if (length > 0) {
+                                                        client.sendText(message.from, "Verificaciones ✅");
+                                                        for (var index_2 = 0; index_2 < 2; index_2++) {
+                                                            var respuesta = "*" + json.claims[index_2].claimReview[0].textualRating + ":* " + json.claims[index_2].text + "\n\nChequeado por *" + json.claims[index_2].claimReview[0].publisher.name + "*. el " + json.claims[index_2].claimDate + ".\n\n*Respuesta:* " + json.claims[index_2].claimReview[0].title + "\n\n\uD83C\uDF0E " + json.claims[index_2].claimReview[0].url;
+                                                            client.sendText(message.from, respuesta);
+                                                        }
+                                                        client.sendText(message.from, repeat_search);
+                                                    }
+                                                    else {
+                                                        client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
+                                                    }
+                                                });
+                                            }, 2000);
                                         }
                                         else if (option == 0) {
                                             client.sendText(message.from, bad_option);

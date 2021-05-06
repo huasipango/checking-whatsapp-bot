@@ -1,3 +1,4 @@
+// tsc -t es5 src/classes/Bot.ts
 import { Client } from "../classes/client";
 import { Periodico } from "../classes/periodico";
 
@@ -123,6 +124,7 @@ export class Bot {
                                     this._users[index].choose.push(0);
                                     this.redirectTo(client, message, 0);    
                                 } else {
+                                    //Tomo el segundo elemento después de la cabecera y se guarda en "option"
                                     let option : number = this._users[index].choose[size - 1];
                                     if (message.body === "0") {
                                         this.redirectTo(client, message, 0);
@@ -172,15 +174,15 @@ export class Bot {
                                                     if (personas.length > 0) {
                                                         console.log(personas);
                                                         
-                                                        let sql = "SELECT content, user_name, date_time FROM tweets WHERE content LIKE '%";
+                                                        let sql = "SELECT id, content, user_name, date_time FROM tweets WHERE content LIKE '%";
                                                         for (let index = 0; index < personas.length; index++) {                     
                                                             console.log(personas[index]);
                                                             sql = sql + `${personas[index]}%'`;
                                                             if ((index + 1) != personas.length) {
                                                                 sql = sql +  " AND content LIKE '%";
-                                                            }else
-                                                                sql = sql + ";"
+                                                            }
                                                         }
+                                                        sql = sql + "ORDER BY id DESC LIMIT 3;"
                                                         console.log(sql);
                                                         try {
                                                             db.each(sql, 
@@ -189,16 +191,13 @@ export class Bot {
                                                                     client.sendText(message.from, respuesta);
                                                                 });    
                                                         } catch (error) {
-                                                            
-                                                        }
-                                                        
+                                                            console.error("Error al imprimir las noticias de Twitter: " + error);
+                                                        } 
                                                     }
                                                 });
                                             } catch (error) {
-                                                console.log(error);
-                                                
+                                                console.error("Error con Google Natural API: " + error);
                                             }
-                                            
                                             
                                             /* this._coincidencias = this.getRssCoincidences(message.body);
 
@@ -210,27 +209,29 @@ export class Bot {
                                             }else{
                                                 client.sendText(message.from, "No hemos encontrado noticias locales sobre el tema. 🔎");
                                             } */
-
-                                            console.log("Realizando consulta en Google API:");
-                                            request(
-                                                `https://factchecktools.googleapis.com/v1alpha1/claims:search?query=${message.body}&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419`, (err, res, body) => {
-                                                        var json = JSON.parse(body);      
-                                                        try {
-                                                            var length = Object.keys(json.claims).length;          
-                                                        } catch (error) {
-                                                            length=0;
+                                            // Se demora 2 segundos en las Verificaciones de Google Fact Checking
+                                            setTimeout(() => {  
+                                                console.log("Realizando consulta en Google Fact Checking API:");
+                                                request(
+                                                    `https://factchecktools.googleapis.com/v1alpha1/claims:search?query=${message.body}&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419`, (err, res, body) => {
+                                                            var json = JSON.parse(body);      
+                                                            try {
+                                                                var length = Object.keys(json.claims).length;          
+                                                            } catch (error) {
+                                                                length=0;
+                                                            }
+                                                            if (length >0) {
+                                                                client.sendText(message.from, "Verificaciones ✅");
+                                                                for (let index = 0; index < 2; index++) {
+                                                                    var respuesta = `*${json.claims[index].claimReview[0].textualRating}:* ${json.claims[index].text}\n\nChequeado por *${json.claims[index].claimReview[0].publisher.name}*. el ${json.claims[index].claimDate}.\n\n*Respuesta:* ${json.claims[index].claimReview[0].title}\n\n🌎 ${json.claims[index].claimReview[0].url}`; 
+                                                                    client.sendText(message.from, respuesta);
                                                         }
-                                                        if (length >0) {
-                                                            client.sendText(message.from, "Verificaciones ✅");
-                                                            for (let index = 0; index < 2; index++) {
-                                                                var respuesta = `*${json.claims[index].claimReview[0].textualRating}:* ${json.claims[index].text}\n\nChequeado por *${json.claims[index].claimReview[0].publisher.name}*. el ${json.claims[index].claimDate}.\n\n*Respuesta:* ${json.claims[index].claimReview[0].title}\n\n🌎 ${json.claims[index].claimReview[0].url}`; 
-                                                                client.sendText(message.from, respuesta);
-                                                    }
-                                                    client.sendText(message.from, repeat_search);    
-                                                        }else{
-                                                            client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
-                                                        }
-                                            });
+                                                        client.sendText(message.from, repeat_search);    
+                                                            }else{
+                                                                client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
+                                                            }
+                                                });
+                                            }, 2000);
                                         } else if (option == 0) {
                                             client.sendText(message.from, bad_option);
                                         }
