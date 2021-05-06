@@ -27,7 +27,7 @@ const answer_2 : string = `Consejos para luchar contra la desinformación 💡\n
 
 const answer_3 : string = `Esta iniciativa es impulsada por el Grupo de Investigación Comunicación, Poder y Ciudadanía en Red, en la ciudad de Loja, al sur de Ecuador. 🇪🇨\n\nBusca aportar en el conocimiento de los medios virtuales y potenciar las capacidades de recepción de la audiencia impulsando procesos que mejoren la interacción de estas con el contenido con el cual interactúa afín de alcanzar mayor rigurosidad en el contenido que consumen desde medios digitales.🎤\n*Visita nuestro sitio web:* 🌐 https://chequeamosenred.com/ \n----------\nEscribe 0 para volver al menú principal ↩️`;
 
-const repeat_search : string = `\nEscribe para navergar\n\n0. Volver al menú principal ↩️`
+const repeat_search : string = `\nPara continuar:\n\nEscribe una nueva noticia a consultar✍🏼\n\n0. Volver al menú principal ↩️`
 
 const bad_option : string = `🙈Este chatbot sólo responde a números y algunas palabras claves. Vamos a ir mejorando.\n\nIntenta de nuevo con un número o letra de las opciones que te dimos\n\nO escribe 0 para volver al menú principal`;
 
@@ -144,7 +144,6 @@ export class Bot {
                                         {
                                             this.redirectTo(client, message, 2);
                                             this._users[index].choose.push(2);
-                                            console.log(this._users[index].choose);
                                         }else{
                                             this.redirectTo(client, message, 0);
                                             this._users[index].choose.push(0);
@@ -185,11 +184,13 @@ export class Bot {
                                                         sql = sql + "ORDER BY id DESC LIMIT 3;"
                                                         console.log(sql);
                                                         try {
-                                                            db.each(sql, 
-                                                                (error, row) => {
-                                                                    var respuesta =  `📰 *Medio:* ${row.user_name}\n\n*Noticia:* ${row.content}\n*📅 Fecha:* ${row.date_time}`;
-                                                                    client.sendText(message.from, respuesta);
-                                                                });    
+                                                            setTimeout(() => { 
+                                                                db.each(sql, 
+                                                                    (error, row) => {
+                                                                        var respuesta =  `📰 *Medio:* ${row.user_name}\n\n*Noticia:* ${row.content}\n*📅 Fecha:* ${row.date_time}`;
+                                                                        client.sendText(message.from, respuesta);
+                                                                    });
+                                                            }, 1000);    
                                                         } catch (error) {
                                                             console.error("Error al imprimir las noticias de Twitter: " + error);
                                                         } 
@@ -220,18 +221,20 @@ export class Bot {
                                                             } catch (error) {
                                                                 length=0;
                                                             }
-                                                            if (length >0) {
+                                                            if (length > 0) {
                                                                 client.sendText(message.from, "Verificaciones ✅");
                                                                 for (let index = 0; index < 2; index++) {
                                                                     var respuesta = `*${json.claims[index].claimReview[0].textualRating}:* ${json.claims[index].text}\n\nChequeado por *${json.claims[index].claimReview[0].publisher.name}*. el ${json.claims[index].claimDate}.\n\n*Respuesta:* ${json.claims[index].claimReview[0].title}\n\n🌎 ${json.claims[index].claimReview[0].url}`; 
                                                                     client.sendText(message.from, respuesta);
-                                                        }
-                                                        client.sendText(message.from, repeat_search);    
+                                                                }
+                                                                client.sendText(message.from, repeat_search);    
                                                             }else{
                                                                 client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
                                                             }
                                                 });
                                             }, 2000);
+                                            //this._users[index].choose.push(message.body);
+                                            console.log(this._users[index].choose);
                                         } else if (option == 0) {
                                             client.sendText(message.from, bad_option);
                                         }

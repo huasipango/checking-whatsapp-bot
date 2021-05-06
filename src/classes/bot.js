@@ -168,7 +168,6 @@ var Bot = /** @class */ (function () {
                                         if (option == 0) {
                                             _this.redirectTo(client, message, 2);
                                             _this._users[index].choose.push(2);
-                                            console.log(_this._users[index].choose);
                                         }
                                         else {
                                             _this.redirectTo(client, message, 0);
@@ -199,21 +198,23 @@ var Bot = /** @class */ (function () {
                                                     }
                                                     if (personas.length > 0) {
                                                         console.log(personas);
-                                                        var sql = "SELECT id, content, user_name, date_time FROM tweets WHERE content LIKE '%";
+                                                        var sql_1 = "SELECT id, content, user_name, date_time FROM tweets WHERE content LIKE '%";
                                                         for (var index_1 = 0; index_1 < personas.length; index_1++) {
                                                             console.log(personas[index_1]);
-                                                            sql = sql + (personas[index_1] + "%'");
+                                                            sql_1 = sql_1 + (personas[index_1] + "%'");
                                                             if ((index_1 + 1) != personas.length) {
-                                                                sql = sql + " AND content LIKE '%";
+                                                                sql_1 = sql_1 + " AND content LIKE '%";
                                                             }
                                                         }
-                                                        sql = sql + "ORDER BY id DESC LIMIT 3;";
-                                                        console.log(sql);
+                                                        sql_1 = sql_1 + "ORDER BY id DESC LIMIT 3;";
+                                                        console.log(sql_1);
                                                         try {
-                                                            db_1.each(sql, function (error, row) {
-                                                                var respuesta = "\uD83D\uDCF0 *Medio:* " + row.user_name + "\n\n*Noticia:* " + row.content + "\n*\uD83D\uDCC5 Fecha:* " + row.date_time;
-                                                                client.sendText(message.from, respuesta);
-                                                            });
+                                                            setTimeout(function () {
+                                                                db_1.each(sql_1, function (error, row) {
+                                                                    var respuesta = "\uD83D\uDCF0 *Medio:* " + row.user_name + "\n\n*Noticia:* " + row.content + "\n*\uD83D\uDCC5 Fecha:* " + row.date_time;
+                                                                    client.sendText(message.from, respuesta);
+                                                                });
+                                                            }, 1000);
                                                         }
                                                         catch (error) {
                                                             console.error("Error al imprimir las noticias de Twitter: " + error);
@@ -258,6 +259,8 @@ var Bot = /** @class */ (function () {
                                                     }
                                                 });
                                             }, 2000);
+                                            //this._users[index].choose.push(message.body);
+                                            console.log(_this._users[index].choose);
                                         }
                                         else if (option == 0) {
                                             client.sendText(message.from, bad_option);
