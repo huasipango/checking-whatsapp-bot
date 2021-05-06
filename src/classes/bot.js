@@ -198,23 +198,21 @@ var Bot = /** @class */ (function () {
                                                     }
                                                     if (personas.length > 0) {
                                                         console.log(personas);
-                                                        var sql_1 = "SELECT id, content, user_name, date_time FROM tweets WHERE content LIKE '%";
+                                                        var sql = "SELECT id, content, user_name, date_time FROM tweets WHERE content LIKE '%";
                                                         for (var index_1 = 0; index_1 < personas.length; index_1++) {
                                                             console.log(personas[index_1]);
-                                                            sql_1 = sql_1 + (personas[index_1] + "%'");
+                                                            sql = sql + (personas[index_1] + "%'");
                                                             if ((index_1 + 1) != personas.length) {
-                                                                sql_1 = sql_1 + " AND content LIKE '%";
+                                                                sql = sql + " AND content LIKE '%";
                                                             }
                                                         }
-                                                        sql_1 = sql_1 + "ORDER BY id DESC LIMIT 3;";
-                                                        console.log(sql_1);
+                                                        sql = sql + "ORDER BY id DESC LIMIT 3;";
+                                                        console.log(sql);
                                                         try {
-                                                            setTimeout(function () {
-                                                                db_1.each(sql_1, function (error, row) {
-                                                                    var respuesta = "\uD83D\uDCF0 *Medio:* " + row.user_name + "\n\n*Noticia:* " + row.content + "\n*\uD83D\uDCC5 Fecha:* " + row.date_time;
-                                                                    client.sendText(message.from, respuesta);
-                                                                });
-                                                            }, 1000);
+                                                            db_1.each(sql, function (error, row) {
+                                                                var respuesta = "\uD83D\uDCF0 *Medio:* " + row.user_name + "\n\n*Noticia:* " + row.content + "\n*\uD83D\uDCC5 Fecha:* " + row.date_time;
+                                                                client.sendText(message.from, respuesta);
+                                                            });
                                                         }
                                                         catch (error) {
                                                             console.error("Error al imprimir las noticias de Twitter: " + error);
@@ -236,29 +234,27 @@ var Bot = /** @class */ (function () {
                                                 client.sendText(message.from, "No hemos encontrado noticias locales sobre el tema. 🔎");
                                             } */
                                             // Se demora 2 segundos en las Verificaciones de Google Fact Checking
-                                            setTimeout(function () {
-                                                console.log("Realizando consulta en Google Fact Checking API:");
-                                                request("https://factchecktools.googleapis.com/v1alpha1/claims:search?query=" + message.body + "&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419", function (err, res, body) {
-                                                    var json = JSON.parse(body);
-                                                    try {
-                                                        var length = Object.keys(json.claims).length;
+                                            console.log("Realizando consulta en Google Fact Checking API:");
+                                            request("https://factchecktools.googleapis.com/v1alpha1/claims:search?query=" + message.body + "&key=AIzaSyBkgsZP_gMy0_ytjZE_o-LyH4XsAwLjvPU&languageCode=es-419", function (err, res, body) {
+                                                var json = JSON.parse(body);
+                                                try {
+                                                    var length = Object.keys(json.claims).length;
+                                                }
+                                                catch (error) {
+                                                    length = 0;
+                                                }
+                                                if (length > 0) {
+                                                    client.sendText(message.from, "Verificaciones ✅");
+                                                    for (var index_2 = 0; index_2 < 2; index_2++) {
+                                                        var respuesta = "*" + json.claims[index_2].claimReview[0].textualRating + ":* " + json.claims[index_2].text + "\n\nChequeado por *" + json.claims[index_2].claimReview[0].publisher.name + "*. el " + json.claims[index_2].claimDate + ".\n\n*Respuesta:* " + json.claims[index_2].claimReview[0].title + "\n\n\uD83C\uDF0E " + json.claims[index_2].claimReview[0].url;
+                                                        client.sendText(message.from, respuesta);
                                                     }
-                                                    catch (error) {
-                                                        length = 0;
-                                                    }
-                                                    if (length > 0) {
-                                                        client.sendText(message.from, "Verificaciones ✅");
-                                                        for (var index_2 = 0; index_2 < 2; index_2++) {
-                                                            var respuesta = "*" + json.claims[index_2].claimReview[0].textualRating + ":* " + json.claims[index_2].text + "\n\nChequeado por *" + json.claims[index_2].claimReview[0].publisher.name + "*. el " + json.claims[index_2].claimDate + ".\n\n*Respuesta:* " + json.claims[index_2].claimReview[0].title + "\n\n\uD83C\uDF0E " + json.claims[index_2].claimReview[0].url;
-                                                            client.sendText(message.from, respuesta);
-                                                        }
-                                                        client.sendText(message.from, repeat_search);
-                                                    }
-                                                    else {
-                                                        client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
-                                                    }
-                                                });
-                                            }, 2000);
+                                                    client.sendText(message.from, repeat_search);
+                                                }
+                                                else {
+                                                    client.sendText(message.from, 'No han habido verificaciones internacionales para tu búsqueda.\nIntenta buscando algo más.🔎');
+                                                }
+                                            });
                                             //this._users[index].choose.push(message.body);
                                             console.log(_this._users[index].choose);
                                         }
